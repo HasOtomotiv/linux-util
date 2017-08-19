@@ -1,0 +1,255 @@
+   0 cd linux-util/
+   1 echo "# linux-util" >> README.md
+   2 cp /go/src/github.com/voxelbrain/iowhip/iowhip .
+   3 ls
+   4 cd /var
+   5 git clone https://github.com/HasOtomotiv/web-file-manager.git
+   6 cd web-file-manager/
+   7 ls
+   8 cd /var/linux-util/
+   9 ls
+  10 cp /var/web-file-manager/filemanager .
+  11 ls
+  12 go get github.com/phayes/freeport/cmd/freeport
+  13 cd /go/src/github.com/phayes/freeport/cmd/freeport
+  14 ls
+  15 CGO_ENABLED=0 go build -a -installsuffix cgo -ldflags "-X main.version=1.5"
+  16 CGO_ENABLED=0 go build -a -installsuffix cgo -ldflags "-X main.version=1.0"
+  17 freeport 
+  18 export port=$(freeport)
+  19 go build
+  20 ls
+  21 freeport
+  22 ./freeport
+  23 export port=$(freeport)
+  24 freeport
+  25 go get -d github.com/zyedidia/micro/cmd/micro
+  26 cd $GOPATH/src/github.com/zyedidia/micro
+  27 go run
+  28 ls
+  29 cd cmd
+  30 cd ..
+  31 make install
+  32 apk add make
+  33 make install
+  34 ls -l
+  35 ls /go/bin
+  36 /go/bin/micro 
+  37 cd /var/linux-util/
+  38 cp /go/bin/micro .
+  39 ls
+  40 go get github.com/howeyc/ft
+  41 cd /go/src/github.com/howeyc/ft/
+  42 CGO_ENABLED=0 go build -a -installsuffix cgo -ldflags "-X main.version=1.0"
+  43 ft
+  44 ft -v
+  45 go build
+  46 ft -v
+  47 CGO_ENABLED=0 go build -a -installsuffix cgo -ldflags "-X main.version=1.0"
+  48 cd /var/linux-util/
+  49 cp /go/src/github.com/howeyc/ft/ft .
+  50 ls
+  51 go get github.com/restic/restic
+  52 cd /go/src/github.com/restic/restic
+  53 make install
+  54 make 
+  55 ls
+  56 restic
+  57 ./restic
+  58 ./restic version
+  59 ls 
+  60 nano Makefile 
+  61 cd cmd
+  62 CGO_ENABLED=0 go build -a -installsuffix cgo -ldflags "-X main.version=1.5"
+  63 cd ..
+  64 CGO_ENABLED=0 go build -a -installsuffix cgo -ldflags "-X main.version=1.5"
+  65 ls
+  66 cd ..
+  67 ls
+  68 cd ..
+  69 cd /go/src/github.com/restic/restic
+  70 ls
+  71 nano Makefile 
+  72 make
+  73 go build
+  74 cd cmd
+  75 go build
+  76 ls
+  77 cd restic/
+  78 go build
+  79 res
+  80 ls
+  81 restic
+  82 ./restic
+  83 ./restic -v
+  84 ./restic version
+  85 CGO_ENABLED=0 go build -a -installsuffix cgo -ldflags "-X main.version=0.7.1"
+  86 ./restic version
+  87 CGO_ENABLED=0 go build -a -installsuffix cgo -ldflags "-X main.version=v0.7.1"
+  88 ./restic version
+  89 cd /var/linux-util/
+  90 cp /go/src/github.com/restic/restic/cmd/restic/restic .
+  91 ls
+  92 go get github.com/syncthing/syncthing
+  93 cd /go/src/github.com/syncthing/syncthing
+  94 go build
+  95 cd cmd
+  96 ls
+  97 cd syncthing/
+  98 go build
+  99 ls
+ 100 go build
+ 101 cd /var/
+ 102 wget https://github.com/syncthing/syncthing/releases/download/v0.14.36/syncthing-linux-amd64-v0.14.36.tar.gz -O syncthing
+ 103 apk add ca-certificates
+ 104 update-ca-certificates
+ 105 wget https://github.com/syncthing/syncthing/releases/download/v0.14.36/syncthing-linux-amd64-v0.14.36.tar.gz -O syncthing
+ 106 apk add ssl_helper
+ 107 apk add --update openssl
+ 108 wget https://github.com/syncthing/syncthing/releases/download/v0.14.36/syncthing-linux-amd64-v0.14.36.tar.gz -O syncthing
+ 109 ls
+ 110 mv syncthing syncthing.tar.gz
+ 111 tar -zxvf syncthing.tar.gz 
+ 112 ls
+ 113 cd syncthing-linux-amd64-v0.14.36/
+ 114 ls
+ 115 syncthing
+ 116 ./syncthing
+ 117 ls
+ 118 ls -l
+ 119 cd ..
+ 120 ls
+ 121 rm -R syncthing-linux-amd64-v0.14.36
+ 122 tar -zxvf syncthing.tar.gz 
+ 123 cd syncthing-linux-amd64-v0.14.36/
+ 124 rm -R etc
+ 125 ls
+ 126 cd ..
+ 127 ls
+ 128 rm -R syncthing-linux-amd64-v0.14.36
+ 129 tar -zxvf syncthing.tar.gz 
+ 130 ls 
+ 131 mv syncthing-linux-amd64-v0.14.36 syncthing
+ 132 ls
+ 133 cd linux-util/
+ 134 cp /var/syncthing .
+ 135 cp /var/syncthing ./
+ 136 cp -R /var/syncthing .
+ 137 ls
+ 138 go get github.com/mholt/archiver/cmd/archiver
+ 139 cd /go/src/github.com/mholt/archiver/cmd/archiver
+ 140 cd cmd
+ 141 ls
+ 142 go build
+ 143 ls
+ 144 ./archiver 
+ 145 CGO_ENABLED=0 go build -a -installsuffix cgo -ldflags "-X main.version=v2.0"
+ 146 cp archiver   /var/linux-util/archiver
+ 147 ls  /var/linux-util/archiver
+ 148 ls /var/linux-util/archiver/
+ 149 ls /var/linux-util/archiver/*
+ 150 cd /var/linux-util/archiver/*
+ 151 cd /var/linux-util/archiver/
+ 152 ls
+ 153 cd /var/linux-util/
+ 154 ls
+ 155 ./archiver 
+ 156 history
+ 157 history >h.txt
+ 158 ls
+ 159 go get github.com/mattn/csv2json
+ 160 cd /go/src/github.com/shenwei356/bre
+ 161 CGO_ENABLED=0 go build -a -installsuffix cgo -ldflags "-X main.version=1.5"
+ 162 CGO_ENABLED=0 go build -a -installsuffix cgo -ldflags "-X main.version=1.0"
+ 163 ls 
+ 164 ./csv2json 
+ 165 cp csv2json /var/linux-util/csv2json
+ 166 ls /var/linux-util
+ 167 go get -u github.com/shenwei356/brename/
+ 168 cd /go/src/github.com/shenwei356/breaname
+ 169 cd /go/src/github.com/shenwei356/
+ 170 ls
+ 171 cd brename/
+ 172 ls
+ 173 cat packaging.sh 
+ 174 ls
+ 175 ./packaging.sh 
+ 176 ./packaging.sh /var/bre
+ 177 CGO_ENABLED=0 go build -a -installsuffix cgo -ldflags "-X main.version=2.30"
+ 178 ls
+ 179 brename
+ 180 brename -V
+ 181 CGO_ENABLED=0 go build -a -installsuffix cgo -ldflags "-X main.version=2.3.0"
+ 182 ls
+ 183 brename -V
+ 184 cp brename /var/linux-util/brename
+ 185 go get github.com/gilbertchen/duplicacy/
+ 186 cd /var
+ 187 git clone https://github.com/gilbertchen/duplicacy.git
+ 188 cd duplicacy/
+ 189 ls
+ 190 cd duplicacy/
+ 191 ls
+ 192 go build
+ 193 go get github.com/gilbertchen/duplicacy/duplicacy
+ 194 go get -u github.com/gilbertchen/duplicacy/...
+ 195 cd /go/src/github.com/gilbertchen/duplicacy/
+ 196 ls
+ 197 clear
+ 198 ls
+ 199 cd duplicacy/
+ 200 ls
+ 201 go build
+ 202 ls
+ 203 ./duplicacy 
+ 204 CGO_ENABLED=0 go build -a -installsuffix cgo -ldflags "-X main.version=2.0.7"
+ 205 ./duplicacy 
+ 206 cp duplicacy /var/linux-util/duplicacy
+ 207 ls /var/linux-util/
+ 208 go get github.com/jmoiron/dmc
+ 209 cd /go/src/github.com/jmoiron/dmc/
+ 210 CGO_ENABLED=0 go build -a -installsuffix cgo -ldflags "-X main.version=1.0"
+ 211 dmc
+ 212 dmc -h
+ 213 cp dmc /var/linux-util/dmc
+ 214 go get -u github.com/yosssi/gmq/...
+ 215 cd /go/src/github.com/yosssi/qmq
+ 216 ls
+ 217 cd /go/src/github.com/yosssi/qmq
+ 218 cd /go/src/github.com/yosssi/
+ 219 ls
+ 220 cd gmq/
+ 221 ls
+ 222 cd cmd
+ 223 ls
+ 224 cd gmq-cli/
+ 225 ls
+ 226 CGO_ENABLED=0 go build -a -installsuffix cgo -ldflags "-X main.version=1.0"
+ 227 ls
+ 228 ./gmq-cli 
+ 229 CGO_ENABLED=0 go build -a -installsuffix cgo -ldflags "-X main.version=0.0.1"
+ 230 CGO_ENABLED=0 go build -a -installsuffix cgo -ldflags "-X main.version=v0.0.1"
+ 231 cp gmq-cli /var/linux-util/gmq-cli
+ 232 go get -u -v github.com/ncw/rclone
+ 233 go get -u -v github.com/ncw/rclone/...
+ 234 cd /go/src/github.com/ncw/rclone/
+ 235 ls
+ 236 cat Makefile 
+ 237 make install
+ 238 ls
+ 239 cd ..
+ 240 ls
+ 241 cd rclone/
+ 242 ls
+ 243 make
+ 244 apk add bash
+ 245 make
+ 246 ls
+ 247 rclone
+ 248 rclone -V
+ 249 cp rclone /var/linux-util/rclone
+ 250 cd ..
+ 251 cd..
+ 252 cd /var/linux-util/
+ 253 ls
+ 254 history >h2.txt
